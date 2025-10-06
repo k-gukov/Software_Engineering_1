@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T3FactoryMethodPatternPrototype", "T3FactoryMethodPatternPrototype.csproj", "{A8837F43-0C85-443D-9D01-2D01EE408212}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8837F43-0C85-443D-9D01-2D01EE408212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8837F43-0C85-443D-9D01-2D01EE408212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8837F43-0C85-443D-9D01-2D01EE408212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8837F43-0C85-443D-9D01-2D01EE408212}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBF5665D-260E-44C1-8F85-A64BB7F29ED3}
+	EndGlobalSection
+EndGlobal
