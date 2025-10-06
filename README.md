@@ -1,1 +1,1 @@
-# Software_Engineering_1
+Program for Smolensk State University on C#
