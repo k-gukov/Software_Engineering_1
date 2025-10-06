@@ -1,1 +1,1 @@
-Program for Smolensk State University on C#
+Programs for Smolensk State University on C#
