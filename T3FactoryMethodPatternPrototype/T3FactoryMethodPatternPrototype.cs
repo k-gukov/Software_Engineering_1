@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace T3FactoryMethodPatternPrototype
@@ -8,6 +8,8 @@ namespace T3FactoryMethodPatternPrototype
         public abstract string NameFigure { get; }
         public abstract int CellsСount { get; }
 
+        public string Name { get; set; }
+
         public string FigureType
         {
             get { return CellsСount > 4 ? "Супер-фигура" : "Обычная фигура"; }
@@ -16,52 +18,54 @@ namespace T3FactoryMethodPatternPrototype
 
         public void PrintProperties()
         {
-            Console.WriteLine($"{NameFigure} (Число клеток: {CellsСount}) - {FigureType}");
+            Console.WriteLine($"{Name} ({NameFigure} (Число клеток: {CellsСount}) - {FigureType}");
         }
     }
 
     //конкретные фигуры
     public class Line: Figure //линия
     {
-        public override string NameFigure => "Линия";
         public override int CellsСount => 4;
+
+        public override string NameFigure => "Линия";
 
         public override object Clone()
         {
-            return new Line();
+            return new Line() {Name = this.Name};
         }
     }
 
     public class Square: Figure //квадрат
     {
-        public override string NameFigure => "Квадрат";
         public override int CellsСount => 4;
+        public override string NameFigure => "Квадрат";
 
         public override object Clone()
         {
-            return new Square();
+            return new Square() { Name = this.Name };
         }
     }
     //супер-фигуры
 
     public class Cross : Figure //крест
     {
-        public override string NameFigure => "Крест";
         public override int CellsСount => 5;
+        public override string NameFigure => "Крест";
 
         public override object Clone()
         {
-            return new Cross();
+            return new Cross() { Name = this.Name };
         }
     }
     public class SuperLine: Figure //супер-линия
     {
-        public override string NameFigure => "Супер-линия";
         public override int CellsСount => 6;
+
+        public override string NameFigure => "Супер-линия";
 
         public override object Clone()
         {
-            return new SuperLine();
+            return new SuperLine() { Name = this.Name };
         }
     }
 
@@ -75,10 +79,10 @@ namespace T3FactoryMethodPatternPrototype
             rnd = new Random();
             prototypes = new List<Figure>
         {
-            new Line(),
-            new Square(),
-            new Cross(),
-            new SuperLine()
+            new Line() {Name = "Линия"},
+            new Square() {Name = "Кадрат"},
+            new Cross() {Name = "Крест"},
+            new SuperLine() {Name = "Супер-линия"}
         };
         }
 
